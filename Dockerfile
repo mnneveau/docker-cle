@@ -268,3 +268,13 @@ RUN rm -rf /tmp/verifyBamID /tmp/libStatGen
 RUN apt-get update && apt-get install -y r-base littler
 
 RUN apt-get install -y lib32ncurses5 
+
+#############
+#Concordance#
+#############
+ENV CONCORDANCE_INSTALL_DIR=/opt/concordance
+
+WORKDIR $CONCORDANCE_INSTALL_DIR
+RUN wget https://github.com/mnneveau/concordance/blob/master/newConcordance.py
+
+RUN pip install FisherExact
