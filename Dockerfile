@@ -275,6 +275,6 @@ RUN apt-get install -y lib32ncurses5
 ENV CONCORDANCE_INSTALL_DIR=/opt/concordance
 
 WORKDIR $CONCORDANCE_INSTALL_DIR
-RUN wget https://github.com/mnneveau/concordance/blob/master/newConcordance.py
+RUN wget https://raw.githubusercontent.com/mnneveau/concordance/master/newConcordance.py
 
 RUN pip install FisherExact
